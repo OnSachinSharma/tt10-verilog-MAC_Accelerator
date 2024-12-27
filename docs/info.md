@@ -9,7 +9,7 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-It multiply and accumutes the data
+It multiply and accumulates the data
 
 ## How to test
 
