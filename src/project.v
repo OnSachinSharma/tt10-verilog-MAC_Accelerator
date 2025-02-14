@@ -30,11 +30,11 @@ module tt_um_MAC_Accelerator_OnSachinSharma (
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
 
-input clk,rst,
-input [3:0] a,b,
+wire rst;
+    wire [3:0] a,b;
 //input ci,
 //output co,
-output [7:0] C,
+    wire [7:0] C;
 wire [3:0] X,Y;
 wire [7:0] S;
 wire [7:0] vedic_out;
