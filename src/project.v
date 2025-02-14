@@ -17,7 +17,7 @@ module tt_um_MAC_Accelerator_OnSachinSharma (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
-    mac_vedicmul_adder DUT ( .a(ui_in[3:0]), .b(ui_in[7:4]),. 
+  //  mac_vedicmul_adder DUT ( .a(ui_in[3:0]), .b(ui_in[7:4]),. 
                             assign [3:0]ui_in = a;
                             assign [7:4]ui_in = b;
                             assign rst_n=rst;
