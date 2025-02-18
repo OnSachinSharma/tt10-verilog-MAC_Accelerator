@@ -37,7 +37,7 @@ module tb ();
 `endif
 
       .ui_in  (ui_in),    // Dedicated inputs
-      .C(uo_out),   // Dedicated outputs
+      .uo_out(uo_out),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path
       .uio_ou(uio_out),  // IOs: Output path
       .uio_oe (uio_oe),   // IOs: Enable path (active high: 0=input, 1=output)
