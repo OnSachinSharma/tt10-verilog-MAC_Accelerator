@@ -18,12 +18,12 @@ module tt_um_MAC_Accelerator_OnSachinSharma
 );
 
 // All output pins must be assigned. If not used, assign to 0.
-    assign uio_out[7:2]=0;
+    
     assign uio_in [7:0]=0;
     assign uio_oe=0;
     
     
-    mac_vedicmul_adder DUT ( .a(ui_in[3:0]), .b(ui_in[7:4]), .C(uo_out), .X(uio_out[0]), .Y(uio_out[1]), .rst(rst_n), .clk(clk));
+    mac_vedicmul_adder DUT ( .a(ui_in[3:0]), .b(ui_in[7:4]), .C(uo_out), .X(uio_out[3:0]), .Y(uio_out[7:4]), .rst(rst_n), .clk(clk));
     
 // List all unused inputs to prevent warnings
 wire _unused = &{ena};
