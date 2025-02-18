@@ -23,7 +23,7 @@ module tt_um_MAC_Accelerator_OnSachinSharma
     assign uio_oe=0;
     
     
-    mac_vedicmul_adder DUT ( .a(ui_in[3:0]), .b(ui_in[7:4]), .C(uo_out), .X(ui_out[0]), .Y(ui_out[1]), .rst(rst_n), .clk(clk));
+    mac_vedicmul_adder DUT ( .a(ui_in[3:0]), .b(ui_in[7:4]), .C(uo_out), .X(uio_out[0]), .Y(uio_out[1]), .rst(rst_n), .clk(clk));
     
 // List all unused inputs to prevent warnings
 wire _unused = &{ena};
