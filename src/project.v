@@ -21,11 +21,15 @@ module tt_um_MAC_Accelerator_OnSachinSharma
     assign uio_out[7:2]=0;
     assign uio_in [7:0]=0;
     assign uio_oe=0;
-    assign ena =0;
+    
     
     mac_vedicmul_adder DUT ( .a(ui_in[3:0]), .b(ui_in[7:4]), .C(uo_out), .X(ui_out[0]), .Y(ui_out[1]), .rst(rst_n), .clk(clk));
     
 // List all unused inputs to prevent warnings
+wire _unused = &{ena};
+endmodule
+// here top module ends
+
 module mac_vedicmul_adder(input clk,rst, input [3:0] a,b,output [7:0] C,output [3:0] X,Y);
 wire [7:0] S;
 wire [7:0] vedic_out;           
