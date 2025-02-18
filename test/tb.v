@@ -36,15 +36,14 @@ module tb ();
       .VGND(VGND),
 `endif
 
-     .a  (ui_in[3:0]),    // Dedicated inputs
-     .b  (ui_in[7:4]),    // Dedicated inputs
-     .C  (uo_out[7:0]),   // Dedicated outputs
+      .ui_in  (ui_in[7:0]),    // Dedicated inputs
+      .C(uo_out[7:0]),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path
       .uio_ou(uio_out),  // IOs: Output path
       .uio_oe (uio_oe),   // IOs: Enable path (active high: 0=input, 1=output)
       .ena    (ena),      // enable - goes high when design is selected
       .clk    (clk),      // clock
-     .rst  (rst_n)     // not reset
+      .rst  (rst_n)     // not reset
   );
 
 endmodule
