@@ -5,7 +5,8 @@
 
 `default_nettype none
 
-module tt_um_MAC_Accelerator_OnSachinSharma (
+module tt_um_MAC_Accelerator_OnSachinSharma 
+(
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
     input  wire [7:0] uio_in,   // IOs: Input path
@@ -16,28 +17,15 @@ module tt_um_MAC_Accelerator_OnSachinSharma (
     input  wire       rst_n     // reset_n - low to reset
 );
 
-  // All output pins must be assigned. If not used, assign to 0.
-  //  mac_vedicmul_adder DUT ( .a(ui_in[3:0]), .b(ui_in[7:4]),. 
-    assign [3:0]ui_in = a[3:0];
-    assign [7:4]ui_in = b[3:0];
-                            assign rst_n=rst;
-    assign [7:0]uo_out= [7:0]C;
-                            
-  //assign uo_out  = ui_in * uio_in;  // Example: ou_out is the multiplication of ui_in and uio_in
-  assign uio_out = 0;
-  assign uio_oe  = 0;
+// All output pins must be assigned. If not used, assign to 0.
+  
+  mac_vedicmul_adder DUT ( .a(ui_in[3:0]), .b(ui_in[7:4]), .C(uo_out));
+   
 
   // List all unused inputs to prevent warnings
-  wire _unused = &{ena, clk, rst_n, 1'b0};
-
-wire rst;
-    wire [3:0] a,b;
-//input ci,
-//output co,
-    wire [7:0] C;
-wire [3:0] X,Y;
+module mac_vedicmul_adder(input clk,rst, input [3:0] a,b,output [7:0] C,output [3:0] X,Y);
 wire [7:0] S;
-wire [7:0] vedic_out;
+wire [7:0] vedic_out;           
 wire co,ci;
 assign ci= 0;
 pipo_1 u1 (.din(a), .clk(clk),.rst(rst),.pipo_out_1(X));
