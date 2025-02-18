@@ -39,7 +39,7 @@ module tb ();
       .ui_in  (ui_in),    // Dedicated inputs
       .uo_out(uo_out),   // Dedicated outputs
       .uio_in (uio_in),   // IOs: Input path
-      .uio_ou(uio_out),  // IOs: Output path
+      .uio_out (uio_out),  // IOs: Output path
       .uio_oe (uio_oe),   // IOs: Enable path (active high: 0=input, 1=output)
       .ena    (ena),      // enable - goes high when design is selected
       .clk    (clk),      // clock
