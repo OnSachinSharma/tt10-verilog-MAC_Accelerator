@@ -21,8 +21,9 @@ async def test_project(dut):
     dut.uio_in.value = 0
     dut.rst_n.value = 1
     await ClockCycles(dut.clk, 10)
-    dut._log.info(f"Reset deasserted, rst_n={dut.rst_n.value}")
     dut.rst_n.value = 0
+    dut._log.info(f"Reset deasserted, rst_n={dut.rst_n.value}")
+    
 
     dut._log.info("Test project behavior")
 
