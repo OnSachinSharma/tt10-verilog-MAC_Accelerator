@@ -36,5 +36,11 @@ async def test_project(dut):
     # Change it to match the actual expected output of your module:
     assert dut.uo_out.value == 6
 
+for _ in range(10):  # Adjust iterations as needed
+    print(f"Time={get_sim_time('ns')} ns | ui_in={dut.ui_in.value} | uo_out={dut.uo_out.value} | rst_n={dut.rst_n.value} | clk={dut.clk.value}")
+    await Timer(10, units="ns")  # Wait for some time
+
+
+
     # Keep testing the module by changing the input values, waiting for
     # one or more clock cycles, and asserting the expected output values.
